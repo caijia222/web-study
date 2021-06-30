@@ -1,4 +1,4 @@
-package com.caijia.bean;
+package com.caijia.mvc.model;
 
 public class User {
 	private long id;

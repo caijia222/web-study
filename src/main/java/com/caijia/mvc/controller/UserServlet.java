@@ -1,4 +1,4 @@
-package com.caijia.servlet;
+package com.caijia.mvc.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.caijia.bean.School;
-import com.caijia.bean.User;
+import com.caijia.mvc.model.School;
+import com.caijia.mvc.model.User;
 
 @WebServlet(urlPatterns = "/user")
 public class UserServlet extends HttpServlet {
@@ -20,6 +20,6 @@ public class UserServlet extends HttpServlet {
 		School school = new School("No.1 Middle School", "101 South Street");
 		User user = new User(1, "Bob", school);
 		req.setAttribute("user", user);
-		req.getRequestDispatcher("/WEB-INF/user.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/mvc.view/user.jsp").forward(req, resp);
 	}
 }

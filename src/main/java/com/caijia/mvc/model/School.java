@@ -1,4 +1,4 @@
-package com.caijia.bean;
+package com.caijia.mvc.model;
 
 public class School {
 	private String name;
